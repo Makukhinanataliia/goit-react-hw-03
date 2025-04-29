@@ -1,7 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { nanoid } from "nanoid";
-import css from "./ContactForm.module.css";
+import styles from "./ContactForm.module.css";
 
 const ContactSchema = Yup.object().shape({
   name: Yup.string()
@@ -24,22 +24,32 @@ export default function ContactForm({ onAdd }) {
         resetForm();
       }}
     >
-      <Form className={css.form}>
+      <Form className={styles.formContainer}>
         <div>
           <label>
             Name
-            <Field name="name" />
-            <ErrorMessage name="name" component="div" className={css.error} />
+            <Field name="name" className={styles.inputField} />
+            <ErrorMessage
+              name="name"
+              component="div"
+              className={styles.errorMessage}
+            />
           </label>
         </div>
         <div>
           <label>
             Number
-            <Field name="number" />
-            <ErrorMessage name="number" component="div" className={css.error} />
+            <Field name="number" className={styles.inputField} />
+            <ErrorMessage
+              name="number"
+              component="div"
+              className={styles.errorMessage}
+            />
           </label>
         </div>
-        <button type="submit">Add Contact</button>
+        <button type="submit" className={styles.submitButton}>
+          Add Contact
+        </button>
       </Form>
     </Formik>
   );

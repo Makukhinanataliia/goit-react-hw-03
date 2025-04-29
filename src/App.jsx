@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import ContactForm from "./components/ContactForm/ContactForm";
 import SearchBox from "./components/SearchBox/SearchBox";
-import ContactList from "./components/ ContactList/ ContactList";
+import ContactList from "./components/ContactList/ContactList";
+import styles from './App.module.css';
+
 
 const initialContacts = [
   { id: "id-1", name: "Rosie Simpson", number: "459-12-56" },
@@ -37,8 +39,8 @@ export default function App() {
   );
 
   return (
-    <div>
-      <h1>Phonebook</h1>
+    <div className={styles.appContainer}>
+      <h1 className={styles.title}>Phonebook</h1>
       <ContactForm onAdd={addContact} />
       <SearchBox value={filter} onChange={setFilter} />
       <ContactList contacts={filteredContacts} onDelete={deleteContact} />

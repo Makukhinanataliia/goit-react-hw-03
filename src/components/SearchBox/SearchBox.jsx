@@ -1,9 +1,9 @@
-import css from "./SearchBox.module.css";
+import style from "./SearchBox.module.css";
 
 export default function SearchBox({ value, onChange }) {
   return (
-    <div className={css.searchBox}>
-      <label>
+    <div className={style.searchBoxContainer}>
+      <label className={style.searchInput}>
         Find contacts by name
         <input
           type="text"
