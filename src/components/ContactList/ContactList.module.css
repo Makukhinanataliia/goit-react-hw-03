@@ -1,18 +1,21 @@
 .contactListContainer {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-top: 20px;
+  gap: 4px;
+  margin-top: 16px;
   border: 1px solid #FFF0F5	;
   border-radius: 5px;
-  background-color: 	#F0FFFF	;
-  width: 200px;
+  background-color: 	#008B8B	;
+  width: 220px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .item {
-  padding: 12px;
+   display: flex;
+  align-items: center;
+  width:200px;
   transition: background-color 0.3s;}
+  
 
 .item:hover {
   background-color:	#F0FFFF;
